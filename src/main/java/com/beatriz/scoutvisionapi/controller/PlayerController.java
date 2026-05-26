@@ -1,6 +1,7 @@
 package com.beatriz.scoutvisionapi.controller;
 
 import com.beatriz.scoutvisionapi.dto.PlayerDTO;
+import com.beatriz.scoutvisionapi.dto.TeamAverageDTO;
 import com.beatriz.scoutvisionapi.entity.Player;
 import com.beatriz.scoutvisionapi.service.PlayerService;
 import jakarta.validation.Valid;
@@ -28,6 +29,21 @@ public class PlayerController {
         }
 
         return playerService.getAllPlayers();
+    }
+
+    @GetMapping("/top-attack")
+    public List<Player> getTopAttackPlayers() {
+        return playerService.getTopAttackPlayers();
+    }
+
+    @GetMapping("/top-defense")
+    public List<Player> getTopDefensePlayers() {
+        return playerService.getTopDefensePlayers();
+    }
+
+    @GetMapping("/team-average")
+    public TeamAverageDTO getTeamAverage() {
+        return playerService.getTeamAverage();
     }
 
     @PostMapping

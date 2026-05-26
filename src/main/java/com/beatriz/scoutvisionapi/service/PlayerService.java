@@ -1,8 +1,10 @@
 package com.beatriz.scoutvisionapi.service;
 
 import com.beatriz.scoutvisionapi.dto.PlayerDTO;
+import com.beatriz.scoutvisionapi.dto.TeamAverageDTO;
 import com.beatriz.scoutvisionapi.entity.Player;
 import com.beatriz.scoutvisionapi.repository.PlayerRepository;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +24,46 @@ public class PlayerService {
 
     public List<Player> getPlayersByPosition(String position) {
         return playerRepository.findByPosition(position);
+    }
+
+    public List<Player> getTopAttackPlayers() {
+
+        return playerRepository.findAll(
+                Sort.by(Sort.Direction.DESC, "attack")
+        );
+    }
+
+    public List<Player> getTopDefensePlayers() {
+
+        return playerRepository.findAll(
+                Sort.by(Sort.Direction.DESC, "defense")
+        );
+    }
+
+    public TeamAverageDTO getTeamAverage() {
+
+        List<Player> players = playerRepository.findAll();
+
+        double averageAttack = players.stream()
+                .mapToInt(Player::getDefense)
+                .average()
+                .orElse(0.0);
+
+        double averageDefense = players.stream()
+                .mapToInt(Player::getDefense)
+                .average()
+                .orElse(0.0);
+
+        double averageMarketValue = players.stream()
+                .mapToDouble(Player::getMarketValue)
+                .average()
+                .orElse(0.0);
+
+        return new TeamAverageDTO(
+                averageAttack,
+                averageDefense,
+                averageMarketValue
+        );
     }
 
     public Player savePlayer(PlayerDTO playerDTO) {
