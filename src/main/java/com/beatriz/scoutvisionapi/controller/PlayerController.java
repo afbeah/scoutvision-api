@@ -52,6 +52,11 @@ public class PlayerController {
         return playerService.getFantasyTeam();
     }
 
+    @GetMapping("/best-value")
+    public Player getBestValuePlayer() {
+        return playerService.getBestValuePlayer();
+    }
+
     @PostMapping
     public Player createPlayer(@Valid @RequestBody PlayerDTO playerDTO) {
         return playerService.savePlayer(playerDTO);

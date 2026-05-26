@@ -96,6 +96,21 @@ public class PlayerService {
 
     }
 
+    public Player getBestValuePlayer() {
+
+        List<Player> players = playerRepository.findAll();
+
+        return players.stream()
+                .max(
+                        Comparator.comparing(
+                                player ->
+                                        (player.getAttack() + player.getDefense())
+                                                / player.getMarketValue()
+                        )
+                )
+                .orElse(null);
+    }
+
     public Player savePlayer(PlayerDTO playerDTO) {
 
         Player player = new Player();
