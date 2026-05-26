@@ -1,5 +1,6 @@
 package com.beatriz.scoutvisionapi.controller;
 
+import com.beatriz.scoutvisionapi.dto.FantasyTeamDTO;
 import com.beatriz.scoutvisionapi.dto.PlayerDTO;
 import com.beatriz.scoutvisionapi.dto.TeamAverageDTO;
 import com.beatriz.scoutvisionapi.entity.Player;
@@ -44,6 +45,11 @@ public class PlayerController {
     @GetMapping("/team-average")
     public TeamAverageDTO getTeamAverage() {
         return playerService.getTeamAverage();
+    }
+
+    @GetMapping("/fantasy-team")
+    public FantasyTeamDTO getFantasyTeam() {
+        return playerService.getFantasyTeam();
     }
 
     @PostMapping
