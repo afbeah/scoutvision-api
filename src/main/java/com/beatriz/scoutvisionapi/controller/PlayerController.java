@@ -57,6 +57,22 @@ public class PlayerController {
         return playerService.getBestValuePlayer();
     }
 
+    @GetMapping("/national-team/{nationalTeam}")
+    public List<Player> getPlayerByNationalTeam(
+            @PathVariable String nationalTeam
+    ) {
+        return playerService
+                .getPlayerByNationalTeam(
+                        nationalTeam
+                );
+    }
+
+    @GetMapping("/world-cup")
+    public List<Player> getWorldCupPlayers() {
+        return playerService
+                .getWorldCupPlayers();
+    }
+
     @PostMapping
     public Player createPlayer(@Valid @RequestBody PlayerDTO playerDTO) {
         return playerService.savePlayer(playerDTO);

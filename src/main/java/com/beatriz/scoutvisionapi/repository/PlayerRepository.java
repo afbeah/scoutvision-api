@@ -13,5 +13,13 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
 
     Optional<Player> findByName(String name);
 
+    List<Player> findByNationalTeam(
+            String nationalTeam
+    );
+
+    List<Player> findByCalledUpForWorldCup(
+            Boolean calledUpForWorldCup
+    );
+
     List<Player> findAll(Sort sort);
 }

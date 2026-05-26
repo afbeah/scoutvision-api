@@ -112,6 +112,21 @@ public class PlayerService {
                 .orElse(null);
     }
 
+    public List<Player> getPlayerByNationalTeam(
+            String nationalTeam
+    ) {
+        return playerRepository.findByNationalTeam(
+                nationalTeam
+        );
+    }
+
+    public List<Player> getWorldCupPlayers() {
+        return playerRepository
+                .findByCalledUpForWorldCup(
+                        true
+                );
+    }
+
     public Player savePlayer(PlayerDTO playerDTO) {
 
         Optional<Player> existingPlayer = playerRepository.findByName(
