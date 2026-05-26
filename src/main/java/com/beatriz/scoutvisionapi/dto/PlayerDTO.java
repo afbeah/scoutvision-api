@@ -27,4 +27,12 @@ public class PlayerDTO {
 
     @Min(value = 1, message = "Valor deve ser maior que zero")
     private Double marketValue;
+
+    @NotBlank(message = "Time atual obrigatório")
+    private String currentTeam;
+
+    @NotBlank(message = "Seleção é obrigatória")
+    private String nationalTeam;
+
+    private Boolean calledUpForWorldCup;
 }

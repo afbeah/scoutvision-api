@@ -28,4 +28,10 @@ public class Player {
     private Integer defense;
 
     private Double marketValue;
+
+    private String currentTeam;
+
+    private String nationalTeam;
+
+    private Boolean calledUpForWorldCup;
 }

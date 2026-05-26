@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PlayerService {
@@ -113,13 +114,26 @@ public class PlayerService {
 
     public Player savePlayer(PlayerDTO playerDTO) {
 
+        Optional<Player> existingPlayer = playerRepository.findByName(
+                playerDTO.getName()
+        );
+
         Player player = new Player();
+
+        if (existingPlayer.isPresent()) {
+            player = existingPlayer.get();
+        } else {
+            player = new Player();
+        }
 
         player.setName(playerDTO.getName());
         player.setPosition(playerDTO.getPosition());
         player.setAttack(playerDTO.getAttack());
         player.setDefense(playerDTO.getDefense());
         player.setMarketValue(playerDTO.getMarketValue());
+        player.setCurrentTeam(playerDTO.getCurrentTeam());
+        player.setNationalTeam(playerDTO.getNationalTeam());
+        player.setCalledUpForWorldCup(playerDTO.getCalledUpForWorldCup());
 
         return playerRepository.save(player);
     }
