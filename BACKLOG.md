@@ -6,9 +6,9 @@ Objetivo: criar a primeira versão visual da aplicação consumindo a API já de
 
 ### Alta Prioridade
 
-* [ ] Criar projeto Angular
-* [ ] Estruturar pastas do frontend
-* [ ] Configurar consumo da API
+* [x] Criar projeto Angular
+* [x] Estruturar pastas do frontend
+* [x] Configurar consumo da API
 * [ ] Criar layout base da aplicação
 * [ ] Criar sidebar de navegação
 * [ ] Criar dashboard inicial
