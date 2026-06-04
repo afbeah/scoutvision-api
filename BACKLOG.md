@@ -1,30 +1,31 @@
-# 📋 ScoutVision Backlog
+# 📋 ScoutVision API Backlog
 
-## 🎯 Sprint Atual - Frontend Foundation
+## ✅ Concluído
 
-Objetivo: criar a primeira versão visual da aplicação consumindo a API já desenvolvida.
+- [x] Spring Boot
+- [x] PostgreSQL
+- [x] Docker
+- [x] Swagger
+- [x] CRUD de jogadores
+- [x] Busca por posição
+- [x] Busca por seleção
+- [x] Analytics
+- [x] Fantasy Team
+- [x] Tratamento global de exceções
+- [x] Variáveis de ambiente
+
+---
+
+## 🌎 Integrações
 
 ### Alta Prioridade
 
-* [x] Criar projeto Angular
-* [x] Estruturar pastas do frontend
-* [x] Configurar consumo da API
-* [ ] Criar layout base da aplicação
-* [ ] Criar sidebar de navegação
-* [ ] Criar dashboard inicial
-
-### Média Prioridade
-
-* [ ] Listar jogadores cadastrados
-* [ ] Criar tabela de jogadores
-* [ ] Criar cards de métricas
-* [ ] Criar tela de detalhes do jogador
-
-### Baixa Prioridade
-
-* [ ] Tema escuro
-* [ ] Responsividade mobile
-* [ ] Ajustes visuais
+- [ ] Pesquisar APIs de futebol
+- [ ] Definir estratégia de integração
+- [ ] Criar serviço de integração externa
+- [ ] Importação automática de jogadores
+- [ ] Atualização periódica de dados
+- [ ] Sincronização com banco local
 
 ---
 
@@ -32,23 +33,11 @@ Objetivo: criar a primeira versão visual da aplicação consumindo a API já de
 
 ### Backlog
 
-* [ ] Comparação entre jogadores
-* [ ] ScoutVision Score
-* [ ] Histórico de desempenho
-* [ ] Evolução temporal
-* [ ] Relatórios
-
----
-
-## 🌎 Integrações
-
-### Backlog
-
-* [ ] Pesquisar APIs de futebol
-* [ ] Definir estratégia de integração
-* [ ] Importação automática de jogadores
-* [ ] Atualização periódica de dados
-* [ ] Sincronização com banco local
+- [ ] ScoutVision Score
+- [ ] Comparação entre jogadores
+- [ ] Histórico de desempenho
+- [ ] Evolução temporal
+- [ ] Relatórios
 
 ---
 
@@ -56,34 +45,13 @@ Objetivo: criar a primeira versão visual da aplicação consumindo a API já de
 
 ### Backlog
 
-* [ ] Cadastro de atletas de base
-* [ ] Cadastro de avaliações
-* [ ] Controle de evolução
-* [ ] Relatórios para pais
-* [ ] Relatórios para treinadores
-* [ ] Comparação entre atletas
-* [ ] Histórico de avaliações
+- [ ] Cadastro de atletas de base
+- [ ] Cadastro de avaliações
+- [ ] Controle de evolução
+- [ ] Histórico de avaliações
 
 ---
 
-## 💡 Ideias Futuras
+## 🚀 Próxima Grande Entrega
 
-* [ ] ScoutVision Score
-* [ ] Ranking por potencial
-* [ ] Comparação por faixa etária
-* [ ] Sistema de observações técnicas
-* [ ] Dashboard para comissões técnicas
-* [ ] Exportação PDF
-* [ ] Exportação Excel
-
----
-
-## 🚀 Próxima Entrega
-
-Frontend Angular com:
-
-* Dashboard
-* Sidebar
-* Integração com API
-* Lista de jogadores
-* Cards de métricas
+Integração com APIs externas de futebol.
